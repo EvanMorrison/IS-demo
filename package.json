@@ -1,0 +1,37 @@
+{
+  "name": "instascreen-demo",
+  "version": "1.0.0",
+  "description": "examples of my work in Instascreen",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "IS-demo"
+  },
+  "author": "Evan Morrison",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@mdx-js/loader": "^1.5.3",
+    "@next/mdx": "^9.1.6",
+    "@zeit/next-css": "^1.0.1",
+    "emotion-theming": "^10.0.27",
+    "hex-rgb": "^4.1.0",
+    "next": "^9.1.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rgb-hex": "^3.0.0"
+  }
+}
