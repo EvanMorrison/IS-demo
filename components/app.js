@@ -1,4 +1,5 @@
 import React from 'react'
+import MDXContent from '../pages/index.mdx'
 import iconLibrary from '../utils/iconLIbrary'
 import Head from 'next/head'
 import { globalStyle, theme } from '../utils/theme.config'
@@ -16,7 +17,12 @@ const AppLayout = props => {
       <Head>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
       </Head>
-      {props.children}
+      <div css={{width: "100%", display: "flex", justifyContent: "center"}}>
+        <div css={{flex: 1, maxWidth: 1200}}>
+          <MDXContent/>
+          {props.children}
+        </div>
+      </div>
     </ThemeProvider>
   )
 }
