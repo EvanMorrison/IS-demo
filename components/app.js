@@ -1,5 +1,6 @@
 import React from 'react'
 import MDXContent from '../pages/index.mdx'
+import Nav from './navigation'
 import iconLibrary from '../utils/iconLIbrary'
 import Head from 'next/head'
 import { globalStyle, theme } from '../utils/theme.config'
@@ -15,12 +16,15 @@ const AppLayout = props => {
     <ThemeProvider theme={theme}>
       <Global styles={globalStyle}/>
       <Head>
+        <title>Evan Morrison TazWorks Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
       </Head>
       <div css={{width: "100%", display: "flex", justifyContent: "center"}}>
-        <div css={{flex: 1, maxWidth: 1200}}>
+        <div css={{flex: 1, padding: 8, maxWidth: 1200, hr: {borderColor: "#6DB56F"}, a: {color: "#D58"}}}>
           <MDXContent/>
-          {props.children}
+          <Nav>
+            {props.children}
+          </Nav>
         </div>
       </div>
     </ThemeProvider>

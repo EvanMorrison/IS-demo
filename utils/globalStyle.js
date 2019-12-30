@@ -21,6 +21,11 @@ const globalStyle = theme => css`
     box-sizing: border-box;
   }
 
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
   p {
     margin: 15px 0;
   }
