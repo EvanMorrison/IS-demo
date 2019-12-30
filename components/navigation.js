@@ -32,11 +32,11 @@ const Nav = props => {
   }, [pathId, router.query.pid])
 
   const nextPage = () => {
-    setPathId(id => (id + 1) % 7)
+    setPathId(id => (id + 1) % 8)
   }
 
   const prevPage = () => {
-    setPathId(id => (id + 6) % 7)
+    setPathId(id => (id + 7) % 8)
   }
 
   const navStyle = {
