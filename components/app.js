@@ -18,6 +18,7 @@ const AppLayout = props => {
       <Head>
         <title>Evan Morrison TazWorks Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+        <link href="/TazWorks-Logo-30-color.png" rel="favicon"/>
       </Head>
       <div css={{width: "100%", display: "flex", justifyContent: "center"}}>
         <div css={{flex: 1, padding: 8, maxWidth: 1200, hr: {borderColor: "#6DB56F"}, a: {color: "#D58"}}}>
