@@ -8,6 +8,7 @@ const nav = [
   "qickapp",
   "scp",
   "scp-template",
+  "disclosures",
   "contacts",
   "requiredfields"
 ]
