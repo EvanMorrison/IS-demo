@@ -1,21 +1,17 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 
-const pages = {
-  "workload-1": {img: "workload-1-full.jpg", imgAlt: "workload 1", pid: "workload-1"},
-  "workload-2": {img: "workload-2-full.jpg", imgAlt: "workload 2", pid: "workload-2"},
-  qickapp: {img: "quickapp-1-full.jpg", imgAlt: "manage quickApp 1", pid: "quickapp"},
-  scp: {img: "scorecardPro-1-full.jpg", imgAlt: "scorecard pro", pid: "scp"},
-  "scp-template": {img: "scp-template-1-full.jpg", imgAlt: "scp template", pid: "scp-template"},
-  contacts: {img: "contacts-1-full.jpg", imgAlt: "contacts", pid: "contacts"},
-  disclosures: {img: "disclosures-1-1200.jpg", imgAlt: "disclosures", pid: "disclosures"},
-  requiredfields: {img: "requiredfields-1-full.jpg", imgAlt: "required fields", pid: "requiredfields"}
-}
+const pages = [
+  {img: "workload-1-full.jpg", imgAlt: "workload 1", pid: "workload-1"},
+  {img: "workload-2-full.jpg", imgAlt: "workload 2", pid: "workload-2"},
+  {img: "quickapp-1-full.jpg", imgAlt: "manage quickApp 1", pid: "quickapp"},
+  {img: "scorecardPro-1-full.jpg", imgAlt: "scorecard pro", pid: "scp"},
+  {img: "scp-template-1-full.jpg", imgAlt: "scp template", pid: "scp-template"},
+  {img: "contacts-1-full.jpg", imgAlt: "contacts", pid: "contacts"},
+  {img: "disclosures-1-1200.jpg", imgAlt: "disclosures", pid: "disclosures"},
+  {img: "requiredfields-1-full.jpg", imgAlt: "required fields", pid: "requiredfields"}
+]
 
-const GenericPage = props => {
-  const router = useRouter();
-  const page = pages[router.query.pid];
-
+const GenericPage = ({page}) => {
   if(!page) return null
 
   return(
@@ -23,6 +19,17 @@ const GenericPage = props => {
       <img src={`/images/${page.img}`} alt={page.imgAlt}/>
     </div>
   )
+}
+
+export function getStaticPaths() {
+  const paths = pages.map(page => `/${page.pid}`)
+  return { paths, fallback: false }
+}
+
+export function getStaticProps({pid}) {
+  return {
+    props: pages.find(page => page.pid === pid) ?? {}
+  }
 }
 
 export default GenericPage
