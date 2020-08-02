@@ -1,7 +1,7 @@
 import React from 'react'
 import MDXContent from '../pages/index.mdx'
 import Nav from './navigation'
-import iconLibrary from '../utils/iconLIbrary'
+import iconLibrary from '../utils/iconLibrary'
 import Head from 'next/head'
 import { globalStyle, theme } from '../utils/theme.config'
 import { ThemeProvider } from 'emotion-theming'
