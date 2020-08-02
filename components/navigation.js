@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const nav = [
   "workload-1",
   "workload-2",
-  "qickapp",
+  "quickapp",
   "scp",
   "scp-template",
   "disclosures",
