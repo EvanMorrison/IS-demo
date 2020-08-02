@@ -73,7 +73,7 @@ import {
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-export default function() {
+export default function iconLibrary() {
   library.add(
     faAlignCenter,
     faAlignJustify,
