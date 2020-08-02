@@ -28,7 +28,7 @@ export function getStaticPaths() {
 
 export function getStaticProps({pid}) {
   return {
-    props: pages.find(page => page.pid === pid) ?? {}
+    props: { page: pages.find(page => page.pid === pid) }
   }
 }
 
